@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+# Customer Churn Prediction System
+# NOTE: model artifacts, datasets and figures ARE committed on purpose so the
+# free Streamlit Community Cloud deployment works out of the box.
+# ---------------------------------------------------------------------------
+
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Streamlit local secrets (never commit real secrets)
+.streamlit/secrets.toml
