@@ -18,7 +18,7 @@
 
 ## 🚀 Live demo
 
-> Deploy it for free in ~5 minutes on [Streamlit Community Cloud](https://streamlit.io/cloud) — see [Deployment](#deployment).
+> https://customer-churn-prediction-system-8vchmzxpkknmvvb7eisggf.streamlit.app/
 
 ## 📌 Table of contents
 
@@ -151,74 +151,9 @@ Evaluation on a **1,405-customer holdout** (never seen during training):
 | **ROC-AUC** | **0.842** | 0.842 |
 | PR-AUC | 0.658 | 0.658 |
 
-**Notes**
-- **Imbalance handled** with `class_weight='balanced'` + ROC-AUC scoring.
-- The **optimal threshold** (Youden's J) trades a little precision for much
-  higher recall — for churn, *missing* an at-risk customer costs more than a
-  false alert.
-- **Top churn drivers**: short tenure, month-to-month contracts, fiber-optic
-  internet, electronic-check payment, missing online-security / tech-support add-ons.
 
-![ROC curve](reports/figures/roc_curve.png)
-![Feature importance](reports/figures/feature_importance.png)
 
-## Deployment
 
-Free hosting with **Streamlit Community Cloud**:
 
-1. **Push to GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: customer churn prediction system"
-   git remote add origin https://github.com/<your-username>/customer-churn-prediction.git
-   git push -u origin main
-   ```
-   > Model artifacts, datasets and figures are committed on purpose so the
-   > deployed app works immediately.
-
-2. **Deploy**
-   - Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-   - **New app** → pick your repo, branch `main`, file `app.py`
-   - Hit **Deploy** — done ✅
-
-3. **Optional polish**
-   - Add your repo under **Settings → Manage app** to rename it (e.g.
-     `customer-churn-prediction.streamlit.app`)
-   - Enable HTTPS (automatic) and share the public URL.
-
-## Sharing on LinkedIn
-
-After deploying, post the **live app URL** plus your GitHub repo. Suggested post:
-
-> 🚀 Just shipped a full end-to-end machine-learning project: **Customer Churn
-> Prediction**.
->
-> 🔍 **Problem:** predict which telecom customers will leave, so retention teams
-> can act before revenue is lost.
->
-> ⚙️ **Stack:** Python, Pandas, scikit-learn, Streamlit — modular pipeline from
-> raw data → tuned Random Forest (5-fold CV, ROC-AUC **0.842**) → live dashboard.
->
-> 📊 **Highlights:** explainable feature importance, Youden's optimal threshold
-> boosting recall to 0.81, and a polished Streamlit app for real-time risk scoring.
->
-> 🔗 Live app: `<your-app-url>`
-> 💻 Code: `github.com/<your-username>/customer-churn-prediction`
->
-> #MachineLearning #DataScience #Python #Streamlit #CustomerChurn #Portfolio
-
-## Roadmap
-
-- [ ] Hyperparameter tuning comparison (XGBoost / Logistic Regression baselines)
-- [ ] Batch CSV upload for scoring many customers
-- [ ] SHAP-based explanations per customer
-- [ ] EDA notebook `01_EDA.ipynb`
-
----
-
-<div align="center">
-
-**Built with Python & ❤️ — a professional portfolio project**
 
 </div>
